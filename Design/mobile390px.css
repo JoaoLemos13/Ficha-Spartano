@@ -1,0 +1,95 @@
+@media screen and (min-width: 390px) {
+
+    .cabecalho {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .EscritaBanner {
+        display: flex;
+        margin-left: 1px;
+        justify-content: flex-start;
+        margin-left: -50px;
+    }
+ 
+
+    .EscritaBanner .f1 {
+        font-size: 50px;
+        
+    }
+    .EscritaBanner .f2 {
+        font-size: 50px;
+    }
+    .paradinha {
+        font-size: 45px;
+        justify-content: flex-end;
+        margin-top: 150px;
+    }
+
+    .i-akar-icons-alarm {
+        padding-bottom: 260px;
+    }
+
+    .bottondiasdesemana{
+        margin-left: 1px;
+
+    }
+    .bottondiasdesemana :focus {
+        background-color: #F74D0C;
+    }
+    article {
+        display: flex;
+        gap: 20px;
+    }
+
+    .FichasdeTreino{
+        width:180px;
+        padding:15px;
+    }
+    .TextoFicha {
+        font-size: 18px;
+    }
+    .AjusteInputEselect {
+        width: 100%;
+padding: 1px;
+    }
+    .areaDosExercicios {
+        width: 181px;
+    }
+    .AjusteInputEselect input {
+        width: 150px;
+    }
+    .AjusteInputEselect select {
+width: 10%;
+text-align: center;
+    }
+.areaDosExercicios{
+    width: 155px;
+}
+    .FichasdeTreino .exercicios {
+        width: 100px;
+
+    }
+
+    .fichaDeTreinoSalva {
+        width: 180px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .fichaDeTreinoSalva label {
+        text-align: center;
+        margin-left: 22px;
+        
+    }
+
+    .espacoCheckBox input {
+        width: 130px;
+        
+    }
+
+    .i-akar-icons-alarm {
+        padding-bottom: 300px;
+    }
+
+
+    
+}

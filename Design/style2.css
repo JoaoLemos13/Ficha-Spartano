@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+
+
+#timer {
+    position: relative;
+    text-align: center;
+    position:relative;
+  }
+  
+  #timer-display {
+    font-size: 64px;
+    margin-bottom: 10px;
+    font-family: 'SF Pro Display', Arial, sans-serif;
+    color: #ffffff;
+    letter-spacing: -1px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    
+
+   
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'SF Pro Text', Arial, sans-serif;
+    border-radius: 10px;
+    border: none;
+    background-color: #007aff;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #00b351;
+  }
+  
+  button:active {
+    background-color: #004499;
+  }
+  #VoltarPagina {
+    margin: -1px 10px 10px -1px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+  }
+
+  .i-akar-icons-circle-x-fill {
+    --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    -webkit-mask: var(--un-icon) no-repeat;
+    mask: var(--un-icon) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color: #F74D0C;
+    color: inherit;
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .alinhamentoX {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 500px; /* Ajuste conforme necessário */
+    right:20px; /* Ajuste conforme necessário */
+  }

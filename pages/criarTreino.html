@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Treino</title>
+    <link rel="stylesheet" href="/Design/treinoPerso.css">
+</head>
+<body>
+    <header>
+        <h1>Criar Treino Personalizado</h1>
+    </header>
+    <div class="cabecalho">
+<h2>Este quistionário tem como objetivo colher informações para que o sistema consiga gerar um
+     treino persolizado que mais se adeque a sua necessidade.
+
+</h2>
+    </div>
+    <article>
+        <div class="Questionário">
+            <p>Qual o seu nível de treino na academia, considere como iniciante se treina a menos de 3 meses, 
+            Intermedíario a mais de 3 mesesconstante e menos que 1 ano, mais que 1 ano de treino constante marque avançado.
+            </p>
+            <div class="alinharCheck">
+                <div><label for="Iniciante">Iniciante</label> 
+            <input required type="checkbox" name="iniciante" id="nivel"> 
+        </div>
+        <div>
+            <label for="Intermedíario">Intermedíario</label>
+            <input required type="checkbox" name="Intermediario" id="nivel">
+            
+        </div>
+        <div><label for="avançado">avançado</label>
+            <input required type="checkbox" name="avancado" id="nivel">
+            
+        </div>
+        </div>
+        </div>
+
+        <br>
+        <div class="Questionário">
+            <p>Quantos dias por semana você predente treinar ?</p>
+            <div class="alinharCheck">
+                <div>
+            <label for="3 dias">3 dias</label>
+            <input type="checkbox" name="3dias" id="dias">
+        </div>
+            <div>
+            <label for="5dias">5 dias</label>
+            <input type="checkbox" name="5dias" id="dias">
+        </div>
+            <div>
+            <label for="">7 dias</label>
+            <input type="checkbox" name="7dias" id="dias">
+        </div>
+            
+        </div>
+        </div>
+
+        <div class="Questionário">
+            <p>Tem algúm musculo que você quer dar uma maior enfâse ?</p>
+<div class="alinharCheck1">
+    <div>
+            <label for="Não">Não</label>
+            <input type="checkbox" name="Nao" id="m">
+        </div>
+        <div>
+            <label for="">Peito</label>
+            <input type="checkbox" name="Peito" id="m">
+        </div>
+        <div>
+            <label for="Ombro">Ombro</label>
+            <input type="checkbox" name="Ombro" id="m">
+        </div> <div>
+            <label for="Ombro">Braço</label>
+            <input type="checkbox" name="Braço" id="m">
+        </div>
+        <div>
+            <label for="Ombro">Abdomen</label>
+            <input type="checkbox" name="Abdomen" id="m">
+        </div>
+        <div>
+            <label for="Ombro">Perna</label>
+            <input type="checkbox" name="Perna" id="m">
+        </div>
+        </div>
+        </div>
+
+
+    </article>
+<script defer src="/app/main.js"></script>
+<script src="/app/treinoRandom.js"></script>
+</body>
+</html>

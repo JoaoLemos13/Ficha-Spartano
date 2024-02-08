@@ -1,0 +1,373 @@
+body {
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+article {
+    display: flex;
+    gap: 35px;
+}
+.cabecalho {
+    background-image: url('/img/BannerPretroeBranco.png'); /* Substitua com o caminho para sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+.cabecalho img {
+    height: 9%;
+}
+
+.menuCabecalho {
+    background-color: rgba(3, 3, 3, 0.5); /* Cor do fundo do menu com transparência */
+    padding: 20px;
+    border-radius: 0 0 10px 10px; /* Borda arredondada na parte inferior */
+    height: 10px;
+    width: 100%;
+}
+
+.menuCabecalho ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuCabecalho li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menuCabecalho a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menuCabecalho a:hover {
+    color: #F74D0C; /* Cor ao passar o mouse */
+}
+
+.EscritaBanner {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    margin: 0px, 0px; 
+    margin-top: 100px;
+    margin-left: 25px;
+    
+
+
+}
+.EscritaBanner .f1 {
+    color: #ffffff;
+    font-size: 70px;
+    padding-bottom: -50px;
+    margin-bottom: 0px;
+   
+}
+
+.EscritaBanner .f2 {
+    color: #F74D0C;
+    font-size: 70px;
+    margin-top: 0px;
+}
+.paradinha {
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    color: #F74D0C;
+    font-size: 80px;
+    justify-content: flex-end;
+}
+
+.diasDaSemana {
+    margin-top: 20px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    gap: 20px;
+    margin-bottom: 15px;    
+    
+
+    
+}
+.diasDaSemana:hover {
+    font-size: 18px;
+    width: 180px;
+    height: 350px;
+    transition: all 0.3s ease; /* Adiciona uma transição suave para animação */
+}
+
+
+
+
+.diasDaSemana button {
+      text-align: center;
+    display: flex;
+   cursor: pointer;
+ overflow: hidden;
+    width: 100px;
+    height: 20px;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Montagu Slab', serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    box-shadow: 3px 1px 2px rgb(107, 107, 107);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+@media screen and (min-width: 769px) {
+    .bottondiasdesemana:hover {
+        width: 180px;
+        height: 30px;
+        font-size: 15px;
+        transition: all 0.3s ease; /* Adiciona uma transição suave para animação */
+    }
+     
+}
+
+.areaTotal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 8px;
+    margin-top: 25px;
+}
+.FichasdeTreino {
+    display: flex;
+    gap: 5px;
+    width: 200px;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    padding-top: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+.TextoFicha {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+.FichasdeTreino input {
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    border: 1px solid grey ;
+    border-radius: 3px;
+    font-family: 'Anton', sans-serif;
+}
+.FichasdeTreino select {
+    width: 135px;
+    margin: 5px;
+}
+
+.AjusteInputEselect {
+    display: flex;
+    width: 100%;
+    gap: 2px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.AjusteInputEselect input {
+    border: 1px solid #F74D0C;
+}
+
+.AjusteInputEselect select {
+    width: 10%;
+    background-color: #F74D0C;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.AjusteInputEselect select:focus{
+    background-color: white;
+}
+
+.AjusteInputEselect select option {
+    border: 1px solid black;
+    
+}
+
+.exercicios {
+    border-radius: 5px;
+    padding: 3px;
+    align-self: flex-end;
+   
+}
+
+.espacoButtonSalvar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.buttonSalvar {
+    align-self: center;
+    background-color: #F74D0C;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.areaDosExercicios {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 200px;
+}
+.areaDosExercicios label {
+text-align: center;
+color: #ffffff;
+}
+
+.areaDosExercicios input {
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.areaTreinoSalvo{
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    width: 100%;
+}
+.fichaDeTreinoSalva {
+    display: flex;
+    gap: 5px;
+    width: 230px;
+    flex-direction: column;
+    background-color: #1E1E1E;
+    padding-top: 5px;
+    padding: 10px;
+    border-radius: 10px 0 0px 10px;
+    margin-bottom: 25px;
+}
+.fichaDeTreinoSalva label {
+    color: rgb(255, 255, 255) ;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+}
+
+.espacoCheckBox {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    
+}
+.fichaDeTreinoSalva input {
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    border: 1px solid grey ;
+    border-radius: 3px;
+    font-family: 'Anton', sans-serif;
+    cursor: pointer;
+    
+}
+.fichaDeTreinoSalva .inputNomeSalvo {
+    border-color: #F74D0C;
+}
+.InputEx {
+    width: 200px;
+    font-size: 14px;
+}
+.fichaDeTreinoSalva  button {
+    background-color: #F74D0C;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+}
+
+.secaoVideo {
+    display:flexbox;
+    background-color: #F74D0C;
+    width: auto;
+    padding: 3px;
+    margin-top: 7px;
+    border-radius: 5px;
+    
+}
+
+.secaoVideo iframe {
+    width: 100%;
+}
+
+.i-akar-icons-alarm {
+    --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cg fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'%3E%3Ccircle cx='12' cy='13' r='9'/%3E%3Cpath d='M15.5 9.5L12 13m7 6l1 3M5 19l-1 3M2 5l3-3m14 0l3 3M12 4V2'/%3E%3C/g%3E%3C/svg%3E");
+    -webkit-mask: var(--un-icon) no-repeat;
+    mask: var(--un-icon) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color: #F74D0C;
+    color: inherit;
+    width: 2.4em;
+    height: 2.4em;
+  }
+
+  .alinhamentoCronometro {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 530px; /* Ajuste conforme necessário */
+    right:20px; /* Ajuste conforme necessário */
+  }
+
+  .i-akar-icons-circle-check-fill {
+    --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m4.768 9.14a1 1 0 1 0-1.536-1.28l-4.3 5.159l-2.225-2.226a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.475-.067z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    -webkit-mask: var(--un-icon) no-repeat;
+    mask: var(--un-icon) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color: #F74D0C;
+    color: inherit;
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  .i-akar-icons-circle-fill {
+    --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Ccircle cx='12' cy='12' r='11' fill='currentColor'/%3E%3C/svg%3E");
+    -webkit-mask: var(--un-icon) no-repeat;
+    mask: var(--un-icon) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color: #ffffff;
+    color: inherit;
+    width: 1.2em;
+    height: 1.2em;
+  }
+
+  
+
+  .i-akar-icons-circle-x-fill {
+    --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11s11-4.925 11-11S18.075 1 12 1m3.707 8.707a1 1 0 0 0-1.414-1.414L12 10.586L9.707 8.293a1 1 0 1 0-1.414 1.414L10.586 12l-2.293 2.293a1 1 0 1 0 1.414 1.414L12 13.414l2.293 2.293a1 1 0 0 0 1.414-1.414L13.414 12z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    -webkit-mask: var(--un-icon) no-repeat;
+    mask: var(--un-icon) no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-color: currentColor;
+    color: inherit;
+    width: 1.2em;
+    height: 1.2em;
+   
+   
+  }

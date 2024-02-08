@@ -1,0 +1,40 @@
+
+
+header {
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    border-bottom: 1px solid gray;
+    box-shadow: 1px 1px 1px rgb(126, 126, 126);
+}
+.cabecalho {
+    font-size: 14px;
+}
+
+.Questionário {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(156, 156, 156);
+    box-shadow: 1px 1px 1px gray;
+    gap: 8px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    width: 700px;
+    margin-bottom: 15px;
+} 
+
+.alinharCheck {
+    display: flex;
+   flex-direction: column;
+   gap: 2px;
+   align-content: baseline;
+
+    
+}
+div {
+    display: flex;
+    gap: 3px;
+}
+.alinharCheck1 {
+    gap: 20px;
+}
