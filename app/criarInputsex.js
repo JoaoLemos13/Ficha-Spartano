@@ -1,7 +1,4 @@
-let selectExercicios;
-let inputsDosExercicios;
-let labelSegundaFeira = [];
-let ExercicioSegundaFeira = [];
+
 let i = 0
 
 
@@ -15,7 +12,8 @@ let i = 0
             inputEx.type = "text";
             inputEx.placeholder = "";
             inputEx.classList = "ex"
-            let teste = document.querySelectorAll("input")
+            
+           
             // adiciona o valor do select dos exercicios dentro do input
             selectExercicios = document.getElementById(opcao)
             
@@ -43,7 +41,7 @@ let i = 0
     inputEx.id = i
     i++
     if(i < selectExercicios.options.length){
-  label.textContent = `${i}° Exercicío`; 
+  //label.textContent = `${i}° Exercicío`; 
   areadosExSemSalvar.appendChild(label)
 let labelNome = label.textContent
   salvarLabel(labelNome, espacoDaFichaFeitaextraida )

@@ -3,22 +3,32 @@ body {
     color: white;
 }
 
+.alinhamentoCronometro {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 100vh;
+  margin: 0;
+
+  
+}
 
 
 #timer {
-    position: relative;
-    text-align: center;
-    position:relative;
+  text-align: center; 
+  align-items: center;
+  
   }
   
   #timer-display {
-    font-size: 64px;
+    font-size: 80px;
     margin-bottom: 10px;
     font-family: 'SF Pro Display', Arial, sans-serif;
     color: #ffffff;
     letter-spacing: -1px;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    text-align: center;
     
 
    
@@ -31,7 +41,7 @@ body {
     font-family: 'SF Pro Text', Arial, sans-serif;
     border-radius: 10px;
     border: none;
-    background-color: #007aff;
+    background-color: #F74D0C;
     color: #fff;
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -65,8 +75,14 @@ body {
 
   .alinhamentoX {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     position: fixed;
-    top: 500px; /* Ajuste conforme necessário */
-    right:20px; /* Ajuste conforme necessário */
+    
   }
+
+  @keyframes blink {
+    50% {
+      color: transparent;
+    }
+  }
+  

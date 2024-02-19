@@ -1,9 +1,21 @@
 //import { tempo } from "./main";
-let tempoDeDescanso = JSON.parse(localStorage.getItem("tempoDeDescanso"))
+let tempoDeDescanso = JSON.parse(localStorage.getItem("tempoDeDescanso")) || ""
 
-console.log(typeof(tempoDeDescanso))
+let TempoParaDescanso = document.getElementById("timer-display")
 
-const duration = tempoDeDescanso* 65000; // 5 minutos em milissegundos
+TempoParaDescanso.addEventListener("blur", () => {
+  let TempoParaDescansoConver = TempoParaDescanso.textContent
+ let tempoMofificado = TempoParaDescansoConver.replace(/:/g,".")
+ 
+  let tempoDeDescansoFinal = parseFloat(tempoMofificado)
+
+  localStorage.setItem("tempoDeDescanso", tempoDeDescansoFinal)
+  
+  
+
+ 
+
+let duration = tempoDeDescansoFinal* 60040; // 5 minutos em milissegundos
 
 const startButton = document.getElementById('start-button');
 const pauseButton = document.getElementById('pause-button');
@@ -52,7 +64,7 @@ function resumeTimer() {
 
 function resetTimer() {
   clearInterval(intervalId);
-  timerDisplay.textContent = '00:00:00';
+  timerDisplay.textContent = '00:00';
   startButton.textContent = 'Iniciar';
   paused = false;
 }
@@ -64,8 +76,7 @@ function updateTimer() {
     clearInterval(intervalId);
     timerDisplay.textContent = '00:00:00';
     // Disparar a vibração aqui
-   let alarme = new Audio("/musica/iphone_alarm-3.mp3")
-   alarme.play()
+   
    navigator.vibrate([1000, 500, 1000])
     return;
   }
@@ -90,9 +101,12 @@ function padZero(number) {
   return number.toString().padStart(2, '0');
 }
 
+if (duration == 0) {
+  timerDisplay.style.color = "#F74D0C";
+  timerDisplay.classList.add("blink"); // Adiciona a classe de animação
+} else {
+  timerDisplay.classList.remove("blink"); // Remove a classe de animação se a duração for diferente de zero
+}
 
-
-
-
-
+})
 

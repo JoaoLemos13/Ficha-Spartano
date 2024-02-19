@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/Design/stylePopup.css">
     <link rel="stylesheet" href="/Design/mobile380px.css">
     <link rel="stylesheet" href="/Design/mobile390px.css">
+    <link rel="stylesheet" href="/Design/menuHamberguer.css">
     <link rel="shortcut icon" href="/img/logosite.png" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,500&display=swap');
@@ -18,11 +19,32 @@
 <body>
     <header class="cabecalho">
         <img src="/img/logosite.png" alt="">
-        <nav class="menuCabecalho">
-            
-            <!-- Seus itens de menu aqui -->
+
+        <nav class="menuCabecalho" >
+<div class="menu-icon" onclick="toggleMenu()">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+
+        <nav class="nav-menumobile">
             <ul>
-                <li><a href="/page.html">Página Inicial</a></li>
+                <li><a href="/index.html">Página Inicial</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li class="espacoRedesSociais"><a href="#"><img src="/img/icons8-instagram-96.png" alt="">
+                     <img src="/img/icons8-whatsapp-96.png" alt=""></a></li>
+                
+            </ul> </nav>
+      
+
+
+
+
+
+            <!-- Seus itens de menu aqui -->
+            <ul class="menuPadrao">
+                <li><a href="/index.html">Página Inicial</a></li>
                 <li><a href="#">Sobre Nós</a></li>
                 <li><a href="/pages/index2.html">Contato</a></li>
             </ul>
@@ -36,11 +58,11 @@
 
     <article>
         <div class="diasDaSemana"> 
-           <button id="Segunda-Feira"  class="bottondiasdesemana" type="button">Segunda-Feira</button> 
-           <button id="Terça-Feira" class="bottondiasdesemana" type="button">Terça-Feira</button> 
-           <button id="Quarta-Feira"  class="bottondiasdesemana" type="button">Quarta-Feira</button> 
-           <button id="Quinta-Feira" class="bottondiasdesemana" type="button">Quinta-Feira</button> 
-           <button id="Sexta-Feira" class="bottondiasdesemana" type="button">Sexta-Feira</button> 
+           <button id="Segunda"  class="bottondiasdesemana" type="button">Segunda</button> 
+           <button id="Terça" class="bottondiasdesemana" type="button">Terça</button> 
+           <button id="Quarta"  class="bottondiasdesemana" type="button">Quarta</button> 
+           <button id="Quinta" class="bottondiasdesemana" type="button">Quinta</button> 
+           <button id="Sexta" class="bottondiasdesemana" type="button">Sexta</button> 
            <button id="Sabado"  class="bottondiasdesemana" type="button">Sabádo</button> 
            <button id="Domingo"  class="bottondiasdesemana" type="button">Domingo</button> 
         </div>
@@ -83,7 +105,7 @@
     <script defer src="/app/CriarSelectDosExercicios.js"></script>
     <script defer src="/app/videosdeExecucao.js"></script>
     <script defer src="/Videos/videos.js"></script>
-    <script defer src="/app/popupTimer.js"></script>
+    <script src="/app/menuHambu.js"></script>
     
 </body>
 </html>

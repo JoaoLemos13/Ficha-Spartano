@@ -8,13 +8,14 @@ article {
     gap: 35px;
 }
 .cabecalho {
-    background-image: url('/img/BannerPretroeBranco.png'); /* Substitua com o caminho para sua imagem de fundo */
+    background-image: url('/img/newbanner2.png'); /* Substitua com o caminho para sua imagem de fundo */
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     align-items: top;
     justify-content: center;
+    width: 100%;
 }
 .cabecalho img {
     height: 9%;
@@ -107,18 +108,16 @@ article {
 
 
 .diasDaSemana button {
-      text-align: center;
+      text-align:center;
     display: flex;
    cursor: pointer;
  overflow: hidden;
     width: 100px;
     height: 20px;
     font-size: 10px;
-    text-align: center;
     font-family: 'Montagu Slab', serif;
     background-color: rgb(255, 255, 255);
     border-radius: 7px;
-    box-shadow: 3px 1px 2px rgb(107, 107, 107);
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -138,6 +137,7 @@ article {
     width: 100%;
     gap: 8px;
     margin-top: 25px;
+   
 }
 .FichasdeTreino {
     display: flex;
@@ -149,6 +149,7 @@ article {
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 25px;
+    flex-direction: column;
 }
 .TextoFicha {
     color: rgb(255, 255, 255);
@@ -241,7 +242,7 @@ color: #ffffff;
 }
 
 .areaTreinoSalvo{
-    display: flex;
+    display: none;
     gap: 8px;
     flex-direction: row;
     width: 100%;
@@ -278,7 +279,7 @@ color: #ffffff;
     border: 1px solid grey ;
     border-radius: 3px;
     font-family: 'Anton', sans-serif;
-    cursor: pointer;
+    
     
 }
 .fichaDeTreinoSalva .inputNomeSalvo {

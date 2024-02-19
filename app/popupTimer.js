@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function() {
     // Tempo em segundos após o qual o popup será exibido (15 segundos neste exemplo)
     let tempoDeDescanso = JSON.parse(localStorage.getItem("tempoDeDescanso"))
@@ -35,4 +36,4 @@ document.addEventListener("DOMContentLoaded", function() {
        
     });
 }});
-
+*/

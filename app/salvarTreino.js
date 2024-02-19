@@ -47,19 +47,19 @@ function salvarTreino (ex, valueLabel) {
   }
      
 
-  let labelSegunda = JSON.parse(localStorage.getItem('Label Segunda-Feira'))
-  let labelterca = JSON.parse(localStorage.getItem('Label Terça-Feira'))
-  let labelquarta = JSON.parse(localStorage.getItem('Label Quarta-Feira'))
-  let labelQuinta = JSON.parse(localStorage.getItem('Label Quinta-Feira'))
-  let labelSexta = JSON.parse(localStorage.getItem('Label Sexta-Feira'))
+  let labelSegunda = JSON.parse(localStorage.getItem('Label Segunda'))
+  let labelterca = JSON.parse(localStorage.getItem('Label Terça'))
+  let labelquarta = JSON.parse(localStorage.getItem('Label Quarta'))
+  let labelQuinta = JSON.parse(localStorage.getItem('Label Quinta'))
+  let labelSexta = JSON.parse(localStorage.getItem('Label Sexta'))
   let labelSabado = JSON.parse(localStorage.getItem('Label Sabado'))
   let labelDomingo = JSON.parse(localStorage.getItem('Label Domingo'))
 
-let treinoSegundaSalvo = JSON.parse(localStorage.getItem('Ex Segunda-Feira'))
-let treinoTercaSalvo = JSON.parse(localStorage.getItem('Ex Terça-Feira'))
-let treinoQuartaSalvo = JSON.parse(localStorage.getItem('Ex Quarta-Feira'))
-let treinoQuintaSalvo = JSON.parse(localStorage.getItem('Ex Quinta-Feira'))
-let treinoSextaSalvo = JSON.parse(localStorage.getItem('Ex Sexta-Feira'))
+let treinoSegundaSalvo = JSON.parse(localStorage.getItem('Ex Segunda'))
+let treinoTercaSalvo = JSON.parse(localStorage.getItem('Ex Terça'))
+let treinoQuartaSalvo = JSON.parse(localStorage.getItem('Ex Quarta'))
+let treinoQuintaSalvo = JSON.parse(localStorage.getItem('Ex Quinta'))
+let treinoSextaSalvo = JSON.parse(localStorage.getItem('Ex Sexta'))
 let treinoSabadoSalvo = JSON.parse(localStorage.getItem('Ex Sabado'))
 let treinoDomingoSalvo = JSON.parse(localStorage.getItem('Ex Domingo'))
 
@@ -67,18 +67,18 @@ let treinoDomingoSalvo = JSON.parse(localStorage.getItem('Ex Domingo'))
 // Carrega a Ficha de Segunda Feira
 // gera o input do treino quando tiver um reload
 window.addEventListener("load", () => {
-  if(localStorage.getItem("Treino do dia Segunda-Feira")){
+  if(localStorage.getItem("Treino do dia Segunda")){
     let novaLabel = document.createElement("label");
     let novoInput = document.createElement("input");
     let novaFicha = document.createElement("div")
-    let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Segunda-Feira")) 
+    let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Segunda")) 
 
     novaLabel.class = "labelTreinoDia";
-    novaLabel.textContent = "Treino de Segunda-Feira"
+    novaLabel.textContent = "Treino de Segunda"
     novoInput.type = "text"
     novoInput.value = ValueInputdoTreino
     novoInput.className = "inputNomeSalvo"
-    novaFicha.id = "FichadeTreinoSalva Segunda-Feira"
+    novaFicha.id = "FichadeTreinoSalva Segunda"
     novaFicha.className = "fichaDeTreinoSalva"
 
     areadoTotaldoEspaco.appendChild(novaFicha)
@@ -88,8 +88,8 @@ window.addEventListener("load", () => {
 })
 // Carregar e criar os inputs e Label salvo no local storage quando tem om reload
 window.addEventListener("load", () => {
-  if (localStorage.getItem("Treino do dia Segunda-Feira")){
-    let novaFicha = document.getElementById("FichadeTreinoSalva Segunda-Feira")
+  if (localStorage.getItem("Treino do dia Segunda")){
+    let novaFicha = document.getElementById("FichadeTreinoSalva Segunda")
     let novoButton = document.createElement("button")
    
 
@@ -104,6 +104,7 @@ window.addEventListener("load", () => {
       novaLabel.class = "labelExerecicios"
       NovoInput.type = "text"
       NovoInput.className = "InputEx"
+      NovoInput.setAttribute("readonly", "")
       espacoCheckBox.type = "checkbox"
       espacoCheckBox.className = "i-akar-icons-circle-fill"
       espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -125,9 +126,9 @@ window.addEventListener("load", () => {
     novoButton.addEventListener("click", () => {
       function trocarTreino () {
   
-        localStorage.removeItem("Ex Segunda-Feira");
-        localStorage.removeItem("Label Segunda-Feira");
-        localStorage.removeItem("Treino do dia Segunda-Feira");
+        localStorage.removeItem("Ex Segunda");
+        localStorage.removeItem("Label Segunda");
+        localStorage.removeItem("Treino do dia Segunda");
         window.location.reload();
       }
       trocarTreino()
@@ -157,21 +158,21 @@ window.addEventListener("load", () => {
 
 
 
-  // Carrega a Ficha de Terça-Feira
+  // Carrega a Ficha de Terça
 
   window.addEventListener("load", () => {
-    if(localStorage.getItem("Treino do dia Terça-Feira")){
+    if(localStorage.getItem("Treino do dia Terça")){
       let novaLabel = document.createElement("label");
       let novoInput = document.createElement("input");
       let novaFicha = document.createElement("div")
-      let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Terça-Feira")) 
+      let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Terça")) 
   
       novaLabel.class = "labelTreinoDia";
-      novaLabel.textContent = "Treino de Terça-Feira"
+      novaLabel.textContent = "Treino de Terça"
       novoInput.type = "text"
       novoInput.value = ValueInputdoTreino
       novoInput.className = "inputNomeSalvo"
-      novaFicha.id = "FichadeTreinoSalva Terça-Feira"
+      novaFicha.id = "FichadeTreinoSalva Terça"
       novaFicha.className = "fichaDeTreinoSalva"
 
       areadoTotaldoEspaco.appendChild(novaFicha)
@@ -181,8 +182,8 @@ window.addEventListener("load", () => {
   })
   // Carregar e criar os inputs e Label salvo no local storage quando tem om reload
   window.addEventListener("load", () => {
-    if (localStorage.getItem("Treino do dia Terça-Feira")){
-      let novaFicha = document.getElementById("FichadeTreinoSalva Terça-Feira")
+    if (localStorage.getItem("Treino do dia Terça")){
+      let novaFicha = document.getElementById("FichadeTreinoSalva Terça")
       let novoButton = document.createElement("button")
       novaFicha.className ="fichaDeTreinoSalva"
 
@@ -197,6 +198,7 @@ window.addEventListener("load", () => {
         novaLabel.class = "labelExerecicios"
         NovoInput.type = "text"
         NovoInput.className = "InputEx"
+        NovoInput.setAttribute("readonly", "")
         espacoCheckBox.type = "checkbox"
         espacoCheckBox.className = "i-akar-icons-circle-fill"
         espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -218,9 +220,9 @@ window.addEventListener("load", () => {
       novoButton.addEventListener("click", () => {
         function trocarTreino () {
     
-          localStorage.removeItem("Ex Terça-Feira");
-          localStorage.removeItem("Label Terça-Feira");
-          localStorage.removeItem("Treino do dia Terça-Feira");
+          localStorage.removeItem("Ex Terça");
+          localStorage.removeItem("Label Terça");
+          localStorage.removeItem("Treino do dia Terça");
           window.location.reload();
         }
         trocarTreino()
@@ -249,21 +251,21 @@ window.addEventListener("load", () => {
 
 
   
-// Carrega a Ficha de Quarta-Feira
+// Carrega a Ficha de Quarta
 
 window.addEventListener("load", () => {
-  if(localStorage.getItem("Treino do dia Quarta-Feira")){
+  if(localStorage.getItem("Treino do dia Quarta")){
     let novaLabel = document.createElement("label");
     let novoInput = document.createElement("input");
     let novaFicha = document.createElement("div")
-    let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Quarta-Feira")) 
+    let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Quarta")) 
 
     novaLabel.class = "labelTreinoDia";
-    novaLabel.textContent = "Treino de Quarta-Feira"
+    novaLabel.textContent = "Treino de Quarta"
     novoInput.type = "text"
     novoInput.value = ValueInputdoTreino
     novoInput.className = "inputNomeSalvo"
-    novaFicha.id = "FichadeTreinoSalva Quarta-Feira"
+    novaFicha.id = "FichadeTreinoSalva Quarta"
     novaFicha.className = "fichaDeTreinoSalva"
 
     areadoTotaldoEspaco.appendChild(novaFicha)
@@ -273,8 +275,8 @@ window.addEventListener("load", () => {
 })
 // Carregar e criar os inputs e Label salvo no local storage quando tem om reload
 window.addEventListener("load", () => {
-  if (localStorage.getItem("Treino do dia Quarta-Feira")){
-    let novaFicha = document.getElementById("FichadeTreinoSalva Quarta-Feira")
+  if (localStorage.getItem("Treino do dia Quarta")){
+    let novaFicha = document.getElementById("FichadeTreinoSalva Quarta")
     let novoButton = document.createElement("button")
 novaFicha.className ="fichaDeTreinoSalva"
 
@@ -289,6 +291,7 @@ novaFicha.className ="fichaDeTreinoSalva"
         novaLabel.class = "labelExerecicios"
         NovoInput.type = "text"
         NovoInput.className = "InputEx"
+        NovoInput.setAttribute("readonly", "")
         espacoCheckBox.type = "checkbox"
         espacoCheckBox.className = "i-akar-icons-circle-fill"
         espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -321,9 +324,9 @@ novaFicha.className ="fichaDeTreinoSalva"
           espacoCheckBox.classList.toggle("i-akar-icons-circle-fill");
         });
   
-        localStorage.removeItem("Ex Quarta-Feira");
-        localStorage.removeItem("Label Quarta-Feira");
-        localStorage.removeItem("Treino do dia Quarta-Feira");
+        localStorage.removeItem("Ex Quarta");
+        localStorage.removeItem("Label Quarta");
+        localStorage.removeItem("Treino do dia Quarta");
         window.location.reload();
       }
       trocarTreino()
@@ -338,21 +341,21 @@ novaFicha.className ="fichaDeTreinoSalva"
 
 
 
-  // Carrega a Ficha de Quinta-Feira
+  // Carrega a Ficha de Quinta
 
   window.addEventListener("load", () => {
-    if(localStorage.getItem("Treino do dia Quinta-Feira")){
+    if(localStorage.getItem("Treino do dia Quinta")){
       let novaLabel = document.createElement("label");
       let novoInput = document.createElement("input");
       let novaFicha = document.createElement("div")
-      let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Quinta-Feira")) 
+      let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Quinta")) 
   
       novaLabel.class = "labelTreinoDia";
-      novaLabel.textContent = "Treino de Quinta-Feira"
+      novaLabel.textContent = "Treino de Quinta"
       novoInput.type = "text"
       novoInput.className = "inputNomeSalvo"
       novoInput.value = ValueInputdoTreino
-      novaFicha.id = "FichadeTreinoSalva Quinta-Feira"
+      novaFicha.id = "FichadeTreinoSalva Quinta"
       novaFicha.className = "fichaDeTreinoSalva"
 
       areadoTotaldoEspaco.appendChild(novaFicha)
@@ -362,8 +365,8 @@ novaFicha.className ="fichaDeTreinoSalva"
   })
   // Carregar e criar os inputs e Label salvo no local storage quando tem om reload
   window.addEventListener("load", () => {
-    if (localStorage.getItem("Treino do dia Quinta-Feira")){
-      let novaFicha = document.getElementById("FichadeTreinoSalva Quinta-Feira")
+    if (localStorage.getItem("Treino do dia Quinta")){
+      let novaFicha = document.getElementById("FichadeTreinoSalva Quinta")
       let novoButton = document.createElement("button")
       for(let i = 0; i<treinoQuintaSalvo.length; i++){
       
@@ -376,6 +379,7 @@ novaFicha.className ="fichaDeTreinoSalva"
         novaLabel.class = "labelExerecicios"
         NovoInput.type = "text"
         NovoInput.className = "InputEx"
+        NovoInput.setAttribute("readonly", "")
         espacoCheckBox.type = "checkbox"
         espacoCheckBox.className = "i-akar-icons-circle-fill"
         espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -401,9 +405,9 @@ novaFicha.className ="fichaDeTreinoSalva"
       novoButton.addEventListener("click", () => {
         function trocarTreino () {
     
-          localStorage.removeItem("Ex Quinta-Feira");
-          localStorage.removeItem("Label Quinta-Feira");
-          localStorage.removeItem("Treino do dia Quinta-Feira");
+          localStorage.removeItem("Ex Quinta");
+          localStorage.removeItem("Label Quinta");
+          localStorage.removeItem("Treino do dia Quinta");
           window.location.reload();
         }
         trocarTreino()
@@ -417,21 +421,21 @@ novaFicha.className ="fichaDeTreinoSalva"
 
 
 
-    // Carrega a Fiha de Sexta-Feira
+    // Carrega a Fiha de Sexta
 
     window.addEventListener("load", () => {
-      if(localStorage.getItem("Treino do dia Sexta-Feira")){
+      if(localStorage.getItem("Treino do dia Sexta")){
         let novaLabel = document.createElement("label");
         let novoInput = document.createElement("input");
         let novaFicha = document.createElement("div")
-        let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Sexta-Feira")) 
+        let ValueInputdoTreino = JSON.parse(localStorage.getItem("Treino do dia Sexta")) 
     
         novaLabel.class = "labelTreinoDia";
-        novaLabel.textContent = "Treino de Sexta-feira"
+        novaLabel.textContent = "Treino de Sexta"
         novoInput.type = "text"
         novoInput.className = "inputNomeSalvo"
         novoInput.value = ValueInputdoTreino
-        novaFicha.id = "FichadeTreinoSalva Sexta-Feira"
+        novaFicha.id = "FichadeTreinoSalva Sexta"
         novaFicha.className = "fichaDeTreinoSalva"
   
         areadoTotaldoEspaco.appendChild(novaFicha)
@@ -441,8 +445,8 @@ novaFicha.className ="fichaDeTreinoSalva"
     })
     // Carregar e criar os inputs e Label salvo no local storage quando tem om reload
     window.addEventListener("load", () => {
-      if (localStorage.getItem("Treino do dia Sexta-Feira")){
-        let novaFicha = document.getElementById("FichadeTreinoSalva Sexta-Feira")
+      if (localStorage.getItem("Treino do dia Sexta")){
+        let novaFicha = document.getElementById("FichadeTreinoSalva Sexta")
         let novoButton = document.createElement("button")
   
         for(let i = 0; i<treinoSextaSalvo.length; i++){
@@ -456,6 +460,7 @@ novaFicha.className ="fichaDeTreinoSalva"
           novaLabel.class = "labelExerecicios"
           NovoInput.type = "text"
           NovoInput.className = "InputEx"
+          NovoInput.setAttribute("readonly", "")
           espacoCheckBox.type = "checkbox"
           espacoCheckBox.className = "i-akar-icons-circle-fill"
           espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -482,9 +487,9 @@ novaFicha.className ="fichaDeTreinoSalva"
         novoButton.addEventListener("click", () => {
           function trocarTreino () {
       
-            localStorage.removeItem("Ex Sexta-Feira");
-            localStorage.removeItem("Label Sexta-Feira");
-            localStorage.removeItem("Treino do dia Sexta-Feira");
+            localStorage.removeItem("Ex Sexta");
+            localStorage.removeItem("Label Sexta");
+            localStorage.removeItem("Treino do dia Sexta");
             window.location.reload();
           }
           trocarTreino()
@@ -539,6 +544,7 @@ novaFicha.className ="fichaDeTreinoSalva"
         novaLabel.class = "labelExerecicios"
         NovoInput.type = "text"
         NovoInput.className = "InputEx"
+        NovoInput.setAttribute("readonly", "")
         espacoCheckBox.type = "checkbox"
         espacoCheckBox.className = "i-akar-icons-circle-fill"
         espacoCheckBox.id = "CheckBoxTreinoCompleto"
@@ -625,6 +631,7 @@ window.addEventListener("load", () => {
         novaLabel.class = "labelExerecicios"
         NovoInput.type = "text"
         NovoInput.className = "InputEx"
+        NovoInput.setAttribute("readonly", "")
         espacoCheckBox.type = "checkbox"
         espacoCheckBox.className = "i-akar-icons-circle-fill"
         espacoCheckBox.id = "CheckBoxTreinoCompleto"

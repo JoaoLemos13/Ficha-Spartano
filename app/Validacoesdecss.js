@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (fichaDeTreinoClicadaSalvo !== null) {
                         fichaDeTreinoClicadaSalvo.style.display = "block";
                         FichaDeTreino.style.display = "block"
+                        areaTotalSalvo.style.display = "block"
                     } else {
                         fichaDeTreinoClicada.style.display = "block";
                     }
