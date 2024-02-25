@@ -34,7 +34,7 @@ function salvarTreino (ex, valueLabel) {
   
   let exercicioDoDia = JSON.parse(localStorage.getItem(`Ex ${valueLabel}`)) || [];
   exercicioDoDia.push(ex)
-  console.log(exercicioDoDia)
+  //console.log(exercicioDoDia)
   localStorage.setItem(`Ex ${valueLabel}`, JSON.stringify(exercicioDoDia) )
 
  
@@ -234,6 +234,7 @@ window.addEventListener("load", () => {
       espacoCheckBox.addEventListener("click", () => {
         espacoCheckBox.classList.toggle("i-akar-icons-circle-check-fill");
         espacoCheckBox.classList.toggle("i-akar-icons-circle-fill");
+       
       });
         
         

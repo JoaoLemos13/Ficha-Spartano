@@ -3,6 +3,7 @@ let i = 0
 
 
 
+
         // Chame a função Criarinputs para criar e adicionar os inputs ao DOM
      
         
@@ -11,6 +12,7 @@ let i = 0
             let inputEx = document.createElement("input");
             inputEx.type = "text";
             inputEx.placeholder = "";
+            inputEx.setAttribute("readonly", "")
             inputEx.classList = "ex"
             
            
@@ -20,6 +22,8 @@ let i = 0
            let inputValue = selectExercicios.options[selectExercicios.selectedIndex].value;
            inputEx.value = inputValue;
 
+          
+           eliminarExEscolhido(selectExercicios)
           
           
 
@@ -40,6 +44,9 @@ let i = 0
     
     inputEx.id = i
     i++
+
+  
+
     if(i < selectExercicios.options.length){
   //label.textContent = `${i}° Exercicío`; 
   areadosExSemSalvar.appendChild(label)
@@ -50,17 +57,25 @@ let labelNome = label.textContent
             areadosExSemSalvar.appendChild(inputEx);
           } else {i =0}
           
-            
+        
+  //Evento Para Voltar e tirar o último Input de Ex caso o Usuario tenha errado na hora de selecionar
+  
+  
 
 // Chamada da Função CriarInputs 
 
-
 inputEx.addEventListener("change", () => {
+
 
   selectExercicios = document.querySelector("#exercicios") 
   for(let i = 0; i< selectExercicios.options.length; i++ ){
 selectExercicios.addEventListener("change", () => {
     Criarinputs()
+
+ 
+
+   // voltarCasoTenhaErradoOsEx(TestePequeno)
+
 })
 }})
         }
@@ -70,3 +85,16 @@ selectExercicios.addEventListener("change", () => {
           window.location.reload()
         }
 
+
+        function voltarCasoTenhaErradoOsEx (ListaDosEx) {
+let ListaDosExercicios = ListaDosEx
+
+
+let listadosExModificada = ListaDosExercicios.pop()
+
+console.log(listadosExModificada)
+
+        }
+
+
+        

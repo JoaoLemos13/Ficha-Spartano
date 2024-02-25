@@ -4,3 +4,6 @@ function toggleMenu() {
 
 console.log(menu)
 }
+
+
+// Função para Fazer voltar o input quando alguem errar 

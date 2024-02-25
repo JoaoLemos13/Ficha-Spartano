@@ -3,10 +3,10 @@ let tempoDeDescanso = JSON.parse(localStorage.getItem("tempoDeDescanso")) || ""
 
 let TempoParaDescanso = document.getElementById("timer-display")
 
-TempoParaDescanso.addEventListener("blur", () => {
+TempoParaDescanso.addEventListener("input", () => {
   let TempoParaDescansoConver = TempoParaDescanso.textContent
  let tempoMofificado = TempoParaDescansoConver.replace(/:/g,".")
- 
+ console.log(TempoParaDescansoConver)
   let tempoDeDescansoFinal = parseFloat(tempoMofificado)
 
   localStorage.setItem("tempoDeDescanso", tempoDeDescansoFinal)
@@ -14,8 +14,8 @@ TempoParaDescanso.addEventListener("blur", () => {
   
 
  
-
-let duration = tempoDeDescansoFinal* 60040; // 5 minutos em milissegundos
+ 
+ let duration = tempoParaMilissegundos(tempoDeDescansoFinal);
 
 const startButton = document.getElementById('start-button');
 const pauseButton = document.getElementById('pause-button');
@@ -29,6 +29,7 @@ let paused = false;
 startButton.addEventListener('click', () => {
   if (!paused) {
     startTimer(duration);
+    console.log(duration)
   } else {
     resumeTimer();
   }
@@ -47,13 +48,13 @@ function startTimer(duration) {
 
   endTime = Date.now() + duration;
 
-  intervalId = setInterval(updateTimer, 1000);
+  intervalId = setInterval(updateTimer, 1000); 
   startButton.textContent = 'Retomar';
   paused = false;
 }
 
 function pauseTimer() {
-  clearInterval(intervalId);
+  clearInterval(intervalId); // Pare o intervalo quando o botão de pausar for clicado
   startButton.textContent = 'Retomar';
   paused = true;
 }
@@ -64,7 +65,7 @@ function resumeTimer() {
 
 function resetTimer() {
   clearInterval(intervalId);
-  timerDisplay.textContent = '00:00';
+  timerDisplay.textContent = `${TempoParaDescansoConver}`;
   startButton.textContent = 'Iniciar';
   paused = false;
 }
@@ -74,39 +75,60 @@ function updateTimer() {
 
   if (remainingTime <= 0) {
     clearInterval(intervalId);
-    timerDisplay.textContent = '00:00:00';
+    timerDisplay.textContent = '00:00';
     // Disparar a vibração aqui
    
    navigator.vibrate([1000, 500, 1000])
     return;
   }
 
-  const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+  
   const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-  const formattedTime = formatTime(hours, minutes, seconds);
+  const formattedTime = formatTime( minutes, seconds);
   timerDisplay.textContent = formattedTime;
 }
 
-function formatTime(hours, minutes, seconds) {
-  const formattedHours = padZero(hours);
+function formatTime(minutes, seconds) {
   const formattedMinutes = padZero(minutes);
   const formattedSeconds = padZero(seconds);
 
-  return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+  return `${formattedMinutes}:${formattedSeconds}`;
 }
 
 function padZero(number) {
   return number.toString().padStart(2, '0');
 }
 
-if (duration == 0) {
-  timerDisplay.style.color = "#F74D0C";
-  timerDisplay.classList.add("blink"); // Adiciona a classe de animação
-} else {
-  timerDisplay.classList.remove("blink"); // Remove a classe de animação se a duração for diferente de zero
-}
+
 
 })
 
+function tempoParaMilissegundos(tempoDecimal) {
+  // Convertendo o tempo decimal em horas, minutos e segundos
+  
+  const minutos = Math.floor((tempoDecimal) );
+  const segundosDecimal = (tempoDecimal - minutos) * 100;
+  const segundos = Math.round(segundosDecimal * 0.6); 
+
+  // Convertendo horas, minutos e segundos para milissegundos
+  
+  const minutosEmMilissegundos = minutos * 60 * 1000;
+  const segundosEmMilissegundos = segundos * 1000;
+
+  // Somando os milissegundos de cada unidade de tempo
+  return  minutosEmMilissegundos + segundosEmMilissegundos;
+}
+
+// Usando a função para converter o tempo de descanso para milissegundos
+
+TempoParaDescanso.addEventListener("input", function() {
+  const conteudo = TempoParaDescanso.textContent;
+  const regexNumeros = /^[0-9:]+$/;
+
+  if (!conteudo.match(regexNumeros)) {
+      // Se o conteúdo não contiver apenas números, limpe a div
+      TempoParaDescanso.textContent = "00:00";
+  }
+});

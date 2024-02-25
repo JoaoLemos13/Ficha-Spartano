@@ -55,6 +55,7 @@ criarEspacoDeTreino.classList = "FichasdeTreino"
 //Caracteristicas para o Input que será criado
 criarInputdoTreinoDodia.type ="text";
 criarInputdoTreinoDodia.classList = "inputdosTreinos";
+criarInputdoTreinoDodia.setAttribute("readonly", "")
 criarInputdoTreinoDodia.id = "TreinoDoDia";
 
 //Caractéristicas para o Select que será crado

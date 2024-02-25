@@ -52,26 +52,29 @@ const OmbroAbdomen = ["escolha seu treino",
 "Desenvolvimento Militar","Desenvolvimento com Halter","Elevação Lateral","Elevação Frontal","Encolimento" ]
 
 
-const salvarTreinoSegunda = [];
-const salvarExSegunda = []; 
-
 
 const localDoTreinoDoDia = ""
 
  function criarSelectEx (Treino, areaDaFicha){
 
-    console.log(areaDaFicha)
+    console.log(Treino)
     
     const localDoTreinoDoDia = document.getElementById(areaDaFicha);
     let ButtonSalvar = document.createElement("button")
+    let ButtonVoltar = document.createElement("button")
     let espacoDoButton = document.createElement("div")
 
 
 
     //Caracteristicas do button
-
+//button Salvar
     ButtonSalvar.textContent = "Salvar"
     ButtonSalvar.className = "buttonSalvar"
+// Button Voltar
+ButtonVoltar.textContent = "voltar"
+ButtonVoltar.className = "buttonSalvar"
+ButtonVoltar.id = "buttonVoltar"
+
 
     // caracteristicas espacoButton
     espacoDoButton.classList = "espacoButtonSalvar"
@@ -281,14 +284,79 @@ newSelect.addEventListener("change", () => {
          Criarinputs(newSelect.id, localDoTreinoDoDia.id)
          localDoTreinoDoDia.appendChild(espacoDoButton);
          espacoDoButton.appendChild(ButtonSalvar)
-         
+         espacoDoButton.appendChild(ButtonVoltar)
+       
         
         })
 
         ButtonSalvar.addEventListener("click", () => {SalvarTreino()})
+        ButtonVoltar.addEventListener("click", () => {voltarInput() })
+
+
+// codigo para pegar a Sting do Dia da Ficha
+let fichaQueEstaSendoTrabalhada = document.getElementById(areaDaFicha)
+let fichaQueEstaSendoTrabalhadaID = fichaQueEstaSendoTrabalhada.id
+let ValordeFicha = fichaQueEstaSendoTrabalhadaID.split(" ")[1];
+
+
+// Função para Retornar e excluir o último input em caso de erro.
+
+        function voltarInput () {
+          let exSalvo = JSON.parse(localStorage.getItem(`Ex ${ValordeFicha}`))
+          
+          if (exSalvo && Array.isArray(exSalvo)) {
+            // Remover o último elemento da propriedade 'lastlength'
+            exSalvo.pop();
+            
+            // Atualizar o objeto modificado no localStorage
+            localStorage.setItem(`Ex ${ValordeFicha}`, JSON.stringify(exSalvo));
+        } else {
+            console.log('O objeto armazenado no localStorage não é válido.');
+           
+        }
+                let inputs = document.querySelectorAll(".ex");
+                let lastInput = inputs.length - 1;
+                if (lastInput >= 0) { // Verifica se há pelo menos um input para remover
+                    let inputAserRemovido = inputs[lastInput];
+                   
+                    inputAserRemovido.remove();
+                } else {
+                    console.log("Não há inputs para remover.");
+                };
+           
+
+        
+
+
 
 }
 
 
 
+}
 
+function eliminarExEscolhido (exercicio) {
+    let selectDosTreinos = exercicio
+   
+        // Pegue o valor selecionado do select
+        let valorSelecionado = selectDosTreinos.value;
+        //console.log("Valor selecionado:", valorSelecionado);
+        
+        // Remova a opção selecionada do select
+        for (let i = 0; i < selectDosTreinos.options.length; i++) {
+            if (selectDosTreinos.options[i].value === valorSelecionado) {
+                selectDosTreinos.remove(i);
+                break;
+            }
+        }
+        
+        // Atualize o conteúdo do select com as opções restantes
+        //console.log("Opções restantes:");
+        for (let option of selectDosTreinos.options) {
+            //console.log(option.value);
+        }
+   ;
+    
+    
+    //exercio dentro do Optins Select, se acha o oXercicio excluir ele se selecionado
+    }

@@ -1,0 +1,105 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+.cabecalho {
+    background-image: url('/img/newbanner2.png'); /* Substitua com o caminho para sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: 100%;
+}
+.cabecalho img {
+    height: 9%;
+}
+
+.menuCabecalho {
+    background-color: rgba(3, 3, 3, 0.5); /* Cor do fundo do menu com transparência */
+    padding: 20px;
+    border-radius: 0 0 10px 10px; /* Borda arredondada na parte inferior */
+    height: 10px;
+    width: 100%;
+}
+
+.menuCabecalho ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuCabecalho li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menuCabecalho a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.menuCabecalho a:hover {
+    color: #F74D0C; /* Cor ao passar o mouse */
+}
+
+.EscritaBanner {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Anton', sans-serif;
+    margin: 0px, 0px; 
+    margin-top: 100px;
+    margin-left: 25px;
+    
+}
+.EscritaBanner .f1 {
+    color: #ffffff;
+    font-size: 70px;
+    padding-bottom: -50px;
+    margin-bottom: 0px;
+   
+}
+
+.EscritaBanner .f2 {
+    color: #F74D0C;
+    font-size: 70px;
+    margin-top: 0px;
+}
+.paradinha {
+    font-family: 'Anton', sans-serif;
+    display: flex;
+    color: #F74D0C;
+    font-size: 80px;
+    justify-content: flex-end;
+}
+
+.espacoDeConteudo {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    padding: 2px;
+    margin-top: 380px;
+   
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+.ImagemDoConteudo {
+    width: 350px;
+}
+.ImagemDoConteudo img{
+   width: 80%;
+
+}
+.Textodoconteudo {
+    width: 350px;
+    text-align: justify;
+}
