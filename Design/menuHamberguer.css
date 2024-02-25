@@ -7,15 +7,19 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     height: 18px;
+    gap: 3px;
     align-items: flex-end;
+    
    
 }
 .menu-line {
     width: 25px;
     height: 2px;
-    background-color: #fff;
+    background-color: #ffffff;
+   
+    
 }
 
 
@@ -47,9 +51,11 @@ body {
     width: 100px;
 }
 
+
 .nav-menumenumobile li {
     margin-bottom: 10px;
     text-align: center;
+    
 }
 .espacoRedesSociais {
     display: flex;
@@ -68,7 +74,7 @@ body {
 .nav-menumenumobile li a {
     color: #fff;
     text-decoration: none;
-    font-size: 8px;
+    
 }
 
 .menuCabecalho.open {
@@ -89,40 +95,21 @@ body {
     text-decoration: none;
 }
 
-
-@media (min-width: 391px) {
 .menuPadrao {
-display: block;
+    display: block;
 }
 
-
+.menu-icon {
+    display: none; /* Mostrar o ícone do menu por padrão */
 }
 
-@media (max-width: 390px) {
+@media (max-width: 429px) {
     .menuPadrao {
-    display: none;
+        display: none; /* Exibir o menu para larguras de tela menores que 430px */
     }
     
-    
-    
-    }
-
-    
-@media (min-width: 391px) {
     .menu-icon {
-    display: none;
+        display: flex; /* Esconder o ícone do menu para larguras de tela menores que 430px */
+        
     }
-    
-    
-    
-    }
-
-    @media (max-width: 429px) {
-        .menuPadrao {
-            display: none;
-            }
-            
-        
-        
-        
-        }
+}
